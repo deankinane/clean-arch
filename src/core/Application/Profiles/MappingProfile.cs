@@ -1,5 +1,9 @@
 using AutoMapper;
-using CleanArch.Application.Features.Exoplanets.Queries;
+using CleanArch.Application.Features.Exoplanets.Commands.CreateExoplanet;
+using CleanArch.Application.Features.Exoplanets.Queries.GetExoplanetDetails;
+using CleanArch.Application.Features.Exoplanets.Queries.GetExoplanetsList;
+using CleanArch.Application.Features.Stars.Commands.CreateStar;
+using CleanArch.Application.Features.Stars.Queries.GetStarsList;
 using CleanArch.Domain.Entities;
 
 namespace CleanArch.Application.Profiles
@@ -9,8 +13,12 @@ namespace CleanArch.Application.Profiles
         protected MappingProfile()
         {
             CreateMap<Exoplanet, ExoplanetListVm>();
-            CreateMap<Exoplanet, ExoplanetDetailVm>().ReverseMap();
+            CreateMap<Exoplanet, ExoplanetDetailVm>();
+            CreateMap<CreateExoplanetCommand, Exoplanet>();
+            
             CreateMap<Star, StarDto>();
+            CreateMap<Star, StarListVm>();
+            CreateMap<CreateStarCommand, Star>();
         }
     }
 }

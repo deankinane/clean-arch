@@ -4,7 +4,6 @@ using MediatR;
 namespace CleanArch.Application.Features
 {
     public abstract class ApplicationRequestHandler<TRequest, TResponse> : IRequestHandler<TRequest, TResponse>
-        where TResponse : class 
         where TRequest : IRequest<TResponse>
     {
         protected readonly IMapper _mapper;

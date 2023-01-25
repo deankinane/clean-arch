@@ -1,4 +1,4 @@
-namespace CleanArch.Application.Features.Exoplanets.Queries
+namespace CleanArch.Application.Features.Exoplanets.Queries.GetExoplanetDetails
 {
    public class StarDto
    {
