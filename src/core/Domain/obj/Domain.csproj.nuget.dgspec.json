@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/deank/repos/src/core/Domain/Domain.csproj": {}
+    "/home/deank/repos/clean-arch/src/core/Domain/Domain.csproj": {}
   },
   "projects": {
-    "/home/deank/repos/src/core/Domain/Domain.csproj": {
+    "/home/deank/repos/clean-arch/src/core/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/deank/repos/src/core/Domain/Domain.csproj",
+        "projectUniqueName": "/home/deank/repos/clean-arch/src/core/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/home/deank/repos/src/core/Domain/Domain.csproj",
+        "projectPath": "/home/deank/repos/clean-arch/src/core/Domain/Domain.csproj",
         "packagesPath": "/home/deank/.nuget/packages/",
-        "outputPath": "/home/deank/repos/src/core/Domain/obj/",
+        "outputPath": "/home/deank/repos/clean-arch/src/core/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/deank/.nuget/NuGet/NuGet.Config"

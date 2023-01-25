@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5qPtPWIBdjJXxyW22ZZ8TFuAF+nPSOfgkZtMzV28vMc9KwSr9PmCTJK7hx44TvwGEaLvlhlwSC7tuaHfZz5lhA==",
+  "dgSpecHash": "7P/zgH22on4GkkLyyeMb21k8ZEcnYSzqvU/V19/CPC3Jr4hqQHhmswqwOKF52MfnQGKBm9DEgbGfaxXnWcNMjQ==",
   "success": true,
-  "projectFilePath": "/home/deank/repos/src/core/Domain/Domain.csproj",
+  "projectFilePath": "/home/deank/repos/clean-arch/src/core/Domain/Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
