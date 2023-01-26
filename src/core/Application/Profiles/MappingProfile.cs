@@ -3,6 +3,7 @@ using CleanArch.Application.Features.Exoplanets.Commands.CreateExoplanet;
 using CleanArch.Application.Features.Exoplanets.Queries.GetExoplanetDetails;
 using CleanArch.Application.Features.Exoplanets.Queries.GetExoplanetsList;
 using CleanArch.Application.Features.Stars.Commands.CreateStar;
+using CleanArch.Application.Features.Stars.Queries.GetStarDetails;
 using CleanArch.Application.Features.Stars.Queries.GetStarsList;
 using CleanArch.Domain.Entities;
 
@@ -19,6 +20,7 @@ namespace CleanArch.Application.Profiles
             CreateMap<Star, StarDto>();
             CreateMap<Star, StarListVm>();
             CreateMap<CreateStarCommand, Star>();
+            CreateMap<Star, StarDetailVm>();
         }
     }
 }
