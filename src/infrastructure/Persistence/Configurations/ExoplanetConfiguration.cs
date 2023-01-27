@@ -26,7 +26,9 @@ namespace CleanArch.Persistence.Configurations
                 .IsRequired();
 
             builder
-                .Property(x => x.StarId)
+                .HasOne<Star>()
+                .WithMany()
+                .HasForeignKey(x => x.StarId)
                 .IsRequired();
         }
     }
