@@ -2,7 +2,7 @@ using MediatR;
 
 namespace CleanArch.Application.Features.Exoplanets.Commands.CreateExoplanet
 {
-    public class CreateExoplanetCommand : IRequest<Guid>
+    public class CreateExoplanetCommand : IRequest<CreateExoplanetCommandResponse>
     {
       public string Name { get; set; } = string.Empty;
       public DateTime Discovered { get; set; }

@@ -1,11 +1,10 @@
 using AutoMapper;
 using CleanArch.Application.Contracts.Persistence;
-using CleanArch.Application.Exceptions;
 using CleanArch.Domain.Entities;
 
 namespace CleanArch.Application.Features.Exoplanets.Commands.CreateExoplanet
 {
-    public class CreateExoplanetCommandHandler : ApplicationRequestHandler<CreateExoplanetCommand, Guid>
+    public class CreateExoplanetCommandHandler : ApplicationRequestHandler<CreateExoplanetCommand, CreateExoplanetCommandResponse>
     {
         private readonly IExoplanetRepository exoplanetRepository;
 
@@ -16,17 +15,20 @@ namespace CleanArch.Application.Features.Exoplanets.Commands.CreateExoplanet
             this.exoplanetRepository = exoplanetRepository;
         }
 
-        public override async Task<Guid> Handle(
+        public override async Task<CreateExoplanetCommandResponse> Handle(
                 CreateExoplanetCommand request,
                 CancellationToken cancellationToken)
         {
             var result = new CreateExoplanetCommandValidator().Validate(request);
-            if(!result.IsValid)
+            var response = new CreateExoplanetCommandResponse(result);
+
+            if (response.Success)
             {
-                throw new ValidationException(result);
+                var newExoplanet = await exoplanetRepository.AddAsync(_mapper.Map<Exoplanet>(request));
+                response.Id = newExoplanet.Id;
             }
-            var newExoplanet = await exoplanetRepository.AddAsync(_mapper.Map<Exoplanet>(request));
-            return newExoplanet.Id;
+
+            return response;
         }
     }
 }
